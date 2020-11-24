@@ -38,15 +38,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
-              
+              maxWidth: 1200
             }
           }
         ]
       }
     },
     {
-      resolve: `gatsby-plugin-google-font`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `roboto mono`,
