@@ -41,4 +41,17 @@
 //             context: { id }
 //         })
 //     })
-// }
+export.createPages = async function({actions, graphql}) {
+    const {data} = await graphql`
+        allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+            edges {
+                node {
+                    frontmatter {
+                    slug
+                    }
+                    id
+                }
+            }
+        }
+    `
+}
